@@ -1,0 +1,764 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 Monaco;
+\f3\fswiss\fcharset0 Helvetica-Oblique;\f4\fnil\fcharset0 HelveticaNeue;\f5\froman\fcharset0 Times-Roman;
+\f6\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red251\green0\blue7;\red0\green0\blue0;\red255\green255\blue255;
+\red10\green9\blue26;\red12\green99\blue153;\red210\green50\blue85;\red135\green135\blue135;\red133\green0\blue67;
+\red85\green138\blue3;\red135\green91\blue44;\red0\green0\blue0;\red251\green0\blue7;\red222\green224\blue230;
+\red25\green60\blue255;\red94\green255\blue255;\red49\green50\blue61;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c12195\c0;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c3922\c3922\c13725;\cssrgb\c0\c46667\c66667;\cssrgb\c86667\c29020\c40784;\cssrgb\c60000\c60000\c60000;\cssrgb\c60000\c0\c33333;
+\cssrgb\c40000\c60000\c0;\cssrgb\c60392\c43137\c22745;\cssrgb\c0\c1\c1;\cssrgb\c100000\c12195\c0;\cssrgb\c89412\c90196\c92157;
+\cssrgb\c12594\c35385\c100000;\cssrgb\c41630\c100000\c100000;\cssrgb\c25098\c25882\c30588;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid301\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid401\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid501\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\margl1440\margr1440\vieww21040\viewh13740\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+Big O, algorithms, time complexities, data structures. What in the samhill does all of this stuff mean, anyways?  Nearly every algorithm book I've read tries to teach you using stuff I barely remember from calculus. Looking at you, Leibniz notation. There are problems with that approach. What if the person reading hasn't taken those classes? What if they don't remember all of it? Perhaps they haven\'92t taking those classes. Perhaps they don\'92t remember it from eons ago. Or perhaps they just don't want to relive the nightmare of factoring factorials! Fret not. I'm here to help. Let's leave Leibniz alone. I'll show you what it all means from a programming perspective instead of a mathematical one. I'll also help you create the mental constructs to figure out which of these algorithms help you in specific situations. Sound hard. Don\'92t worry, we have visuals. Thank you, graphic design. Now, let's get our hands dirty, shall we?\
+\
+\
+ALGORITHMS\
+ALGORITHMS CAN BE HEADACHE!!! But they don't have to be. They're actually quite fun. And \cf2 \'93useful\'94 striked out\cf0 \ul \ulc0  \ulnone necessary. The more you learn about algorithms, the more you see just how important they are. They can turn you from an every day programmer doing just what you need to get the job done, into a coding wizard where your code is not just more efficient but much cleaner and easier to understand. You will become more hireable. You will be come better and faster. You will become... a wizard. \cf2 \'93You\'92re a wizard, Harry\'94 image \cf0 \
+\pard\pardeftab720\sl760\sa134\partightenfactor0
+
+\f1\b\fs67\fsmilli33600 \cf3 \cb4 \expnd0\expndtw0\kerning0
+So what\'92s an algorithm, anyway?\
+\pard\pardeftab720\sa660\partightenfactor0
+
+\f0\b0\fs44 \cf5 Simply put, an algorithm is a series of contained steps, which you follow in order to achieve some goal, or to produce some output. Let\'92s take for example your grandma\'92s recipe for baking a cake. Wait, does that count as an algorithm? Sure it does!\
+\pard\pardeftab720\sl504\partightenfactor0
+
+\f2\fs28 \cf6 \cb1 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 function
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  
+\fs28 \cf7 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 BakeCake\cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 (\cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 flavor\cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 ,\cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  icing\cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 )\{
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \
+"\
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 1.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Heat Oven to 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 350
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 F
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 2.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Mix flour
+\fs28 \cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 ,
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  baking powder
+\fs28 \cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 ,
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  salt\
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 3.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Beat butter and sugar until fluffy\
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 4.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Add eggs
+\fs28 \cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 .
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 5.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Mix 
+\fs28 \cf6 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 in
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  flour
+\fs28 \cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 ,
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  baking powder
+\fs28 \cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 ,
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  salt\
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 6.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Add milk and 
+\fs28 \cf10 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 " + flavor + "
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 7.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Mix further\
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 8.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Put 
+\fs28 \cf6 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 in
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  pan\
+ 
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 9.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Bake 
+\fs28 \cf6 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 for
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 30
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  minutes\
+
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 10.\cf10 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 " + if(icing === true) return 'add icing' + "
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \
+
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 10.
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  Stuff your face\
+"\
+
+\fs28 \cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \}
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \
+\
+
+\fs28 \cf7 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 BakeCake\cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 (\cf10 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 'vanilla'\cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 ,
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  
+\fs28 \cf9 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 true\cf8 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 )
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  
+\fs28 \cf11 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 =>
+\fs33\fsmilli16800 \cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0  deliciousness\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 DATA STRUCTURES\
+blah blah blah\
+\
+TIME COMPLEXITY\
+Space Complexity. Time Complexity. These sound\'85 well, complex. Good news. We\'92re not dealing with trying to solve the space-time continuum here. Space complexity means that we are solving the space, or how much memory a program takes up. More good news. We aren\'92t going to concern ourselves with space complexity here. While it\'92s something to keep in mind if you were to say, programming a smart watch or a microcontroller, we\'92re just going to compartmentalize and focus on what we will be concerning ourselves with 99% of the time, which is time complexity. Time complexity, also known as runtime complexity, means we are dealing with the time it takes to run a program, Simple as that. Besides, space complexity is a \cf2 sinch\cf0  when we know enough about time complexity. So free up space in your brain by forgetting about space complexity. Time will take of all that (get it? \cf2 clown emoji\cf3 ). But how do we write time complexity?\cf2  <\'97 \'93segway to big O notation\'94 image\cf0 \
+\
+\
+BIG O NOTATION\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf3 \expnd0\expndtw0\kerning0
+Big O notation (with a capital letter O, not a zero), also called Landau's symbol, is a symbol used in complexity theory, computer science, and mathematics to describe the asymptotic behavior of functions. Well, what does that mean? Short and sweet, 
+\f3\i it tells you how fast a function grows or declines
+\f0\i0  i.e. it's rate of change. \
+\
+We use big-o to describe the performance of an algorithm.\cf0 \kerning1\expnd0\expndtw0  \cf3 \expnd0\expndtw0\kerning0
+I'm going to go over all of the basic notations here and show you what it is exactly they mean so you're not left in the dust, but don't worry about the mathematical proofs. The proof is to show you what they do. Just look at the nifty images I made instead. For any of this to make sense to you, however, we have talk about this n business real quick. 'n' \cf0 \kerning1\expnd0\expndtw0 is a variable to represent how many elements you have, such as in an array. A real world example of this is a train. If a train consists of the font cab, three cabins, and the caboose (i.e. the back), then we say the train has 5 elements, or n = 5. \
+\
+With that out of the way, below is a list of the seven time complexities to understand. I'll give you the name, the notation, what all that hoo-hah actually means, and an example written in Java, Javascript, and \cf2 C#\cf0 \ul .\ulnone  While the code in these examples isn't exactly professionally structured, it's important you get an understanding of what it does. I don't want to exclude newer programmers who are still developing their know-how with concepts such as recursion. Besides, there's more code fun down the road when we get into the algorithms \cf2 ;)\cf0 \
+\
+O(1) Constant Time - Note the lack of an 'n' here. This means we don't deal with all of the elements. It's just one action. Just like Cookie Monster taking one cookie out of a sleeve of cookies, albeit, a horrible example. That would never happen.\
+Programming Example:\
+String[] cookieSleeve = new String[]\{"cookie","cookie","cookie","cookie"\};\
+cookieSleeve[0];\
+//1 cookie\
+\
+O(n) Linear Time - Here's that pesky 'n'. As we know, an 'n' means all of the elements. In an array, this would be the length of the array. Just like Cookie Monster eating all of the cookies in a sleeve of cookies. A more realistic example.\
+Programming Example:\
+String[] cookieSleeve = new String[]\{"cookie","cookie","cookie","cookie"\};\
+int cookieCount = 0;\
+for(int width = 0; x < cookieSleeve.length < x++\{\
+	cookieCount++;\
+\}\
+//cookieCount = 4;\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx17631\pardirnatural\partightenfactor0
+\cf0 O(n^2) Quadratic Time - Where O(n^2) usually comes up is when you iterate through every iteration of n, n times. Let's say you're going to a cookie bake. You have to make 4 cookies, one for you  and one for each of your three friends (we're not including the extras you made for later). So now you have 4 cookies, but each of your friends also makes 4 cookies. Now there are 16 cookies! Ta da.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Programming Example:\
+String[] cookies = new String[]\{'cookie','cookie','cookie','cookie'\};\
+int pieceCount = 0;\
+for(int width = 0; x < choclateBar.length < x++\{\
+	for(int length = 0; x < choclateBar.length < x++\{\
+		pieceCount++;\
+	\}\
+\}\
+//pieceCount = 16;\
+\
+\
+\
+O(log(n)) Logarithmic Time - The logarithmic time complexities is where most people get choked up. Well, grab some milk to wash down that anxiety. It's fairly easy. Simply, keep cutting an array in half until it's down to one element left. Bam! Still confused? I'm getting tired of cookies but I still have a sweet tooth, so let's try some chocolate. Say you want to eat half of a sixteen piece chocolate bar. You break it in half once. Now you have eight pieces. You're still hungry so you break it in half again. Now there's four pieces. Once again, now there's two pieces. A final time and we're down to 1 piece. So it took us 4 breaks to get through a 16-piece bar. You can't break the final piece in half, so we're done here. And probably have a stomach ache.\
+Programming Example:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf3 \expnd0\expndtw0\kerning0
+        double pieces = 16;\
+        int breaks = 0;\
+        while(pieces != 1) \{\
+            breaks++;\
+            pieces = Math.ceil(pieces/2);\
+        \}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf12 \kerning1\expnd0\expndtw0 //breaks = 4\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+OPTIONAL further explanation on logarithmic time complexity (with a little math review). I know. I know. I said this was a math 
+\f3\i un
+\f0\i0 friendly \cf2 book\cf12 . This is the only time I'll do this to you. I promise. But if you're uncomfortable with logarithms, fret not. You can ignore this part and be on your merry way if you're satisfied with the previous explanation. This is for those stubborn folk who cannot sleep until they know exactly what in tarnation is going on here. If that's you, read on you restless soul.\
+\
+There are really just two things to know when working with logarithms in Big O to get you through. The first is, for the most part, we don't give a \cf2 poop emoji\cf12  regarding constants in time complexities. Caring about the rate of change in regard to n is the goal here. The second, log(n) for algorithms in computer science generally implies a base of 2. "Well, that's stupid" you say. "Why don't they write base 2 since omitting it typically means a base of 10?" you ask? Well, remember rule one.  WE DON'T GIVE A  \cf2 poop emoji\cf12  REGARDING CONSTANTS. How are the two related? Let me elaborate.\
+\
+Let's take O(n). What this is asking us is, how many iterations does it take when we have n elements? Same with O(log(n)). How many iterations (x) does it take when we have log(n) elements? This can be written as x = log(n). \
+\
+O(log(n)) <-> x = logb2(n) <-> n = 2^x\
+\
+Hanging in there? We're almost done. Just a little math talk to see the magic. Using the 'ol logarithm property, log b2 n = x is equivalent to n = 2^x. Regardless if its base 2 or 10, we have n = c^x, where c is a constant. As rule one states... just kidding. You remember. \cf2 poop emoji\cf12 .  Do you also remember how it took us 4 breaks to get through 16 pieces of chocolate? Guess what 2^4 equals?! 16. It's 16. This means that log(16) = 4. As I said. Magic.\
+\
+The only thing that's left to answer is WHY we don't care about constants in time complexities. I'd tell you that it's out of the scope of this book, but if you have read this far, you're probably unsatisfied with that answer so I'll give you an easy explanation to tied you over until you want to pursue that degree in complexity analysis.\cf3 \expnd0\expndtw0\kerning0
+ Ready for it?\
+The base of a logarithm or exponent tells you how LARGE the number is, but it doesn't tell you anything about it's growth, or rate of change. \cf12 \kerning1\expnd0\expndtw0  I remind you the short and sweet definition for BigO. 
+\f3\i I\cf3 \expnd0\expndtw0\kerning0
+t tells you how fast a function grows or declines
+\f0\i0 . Not how large it is.\
+\
+Now that we got all of that mumbo jumbo out there into your brain universe and we understand we're working with base 2, let's sumarize this explanation:\
+O(log(n)) is equivalent to n = 2^x. Stated another way, 
+\f3\i 2 to what power does it take to reach n elements
+\f0\i0 . That is all it means when you're working with logarithmic time complexities \cf2 drops mic image\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf12 \kerning1\expnd0\expndtw0 \
+O(nlog(n)) Linearithmic Time - What? More logarithms?! It's ok. It's ok. This one is pretty much the same as O(log(n)) with one caveat. Cut the array in half until you get down to one element as before, but this time count the total elements very time as well. For example, every time you break that aforementioned chocolate bar in half, you just have to also count every piece of the bar to make sure nobody ate any of the pieces. Maybe you got hungry. No judgement. This time complexity is the same exact thing as taking O(log(n)) and O(n) and adding them together.\
+programming example:\
+        int barSize = 16;\
+        double pieces = barSize;\
+        int count = 0;\
+        while(pieces != 1)\{\
+            count += barSize;\
+            pieces = Math.ceil(pieces/2);\
+        \}\
+//count = 64\
+\
+O(2^n) Exponential Time - To start, let\'92s figure out the growth of \cf12 O(2^n) where n = 7. That would be the same as 2^7, or 2*2*2*2*2*2*2. Our answer is 128. Not too difiicult. Regarding recognizing an exponential time complexity, it would serve you well \cf12 to think of it in two different ways. I like to think of the first as \'93cloning\'94 or \'93doubling\'94 time. You have one cookie, clone it, now you have 2 cookies. Clone those, now you have 4 cookies. Then, 8 cookies. Then\'85 well, you have a lot of cookies. \cf12 If n was 7, this would mean that you would clone the cookies 7 times. Bon apetit.\
+\
+Another way to think about exponential time has to deal with the different 
+\f3\i combinations
+\f0\i0 , or 
+\f3\i the order of things in which order doesn\'92t matter
+\f0\i0 . Let\'92s say we see 3 cookies on the shelf at the store: a chocolate chip, a snickerdoodle, and an oatmeal. How many cookies do we want? Do we want any cookies? All of the cookies? Perhaps just a chocolate chip and an oatmeal. Here\'92s our options:\
+\
+1: No cookies.\
+2: Chocolate chip.\
+3: Oatmeal.\
+4: Snickerdoodle.\
+5: Chocolate chip and an oatmeal.\
+6: Snickerdoodle and an oatmeal.\
+7: Chocolate chip and a snickerdoodle.\
+8: All 3 cookies.\
+\
+We have 3 options of cookies and 8 possiblilities of buying options. This would be a scenario of exponential time (2^n) where n = 3, or 2^3 = 8. \
+\cf12 \
+programming example:\
+\
+        int cookies = 1;\
+        int cloningOfCookies = 3;\
+        for(int combinations = 0; combinations  <  cloningOfCookies; combinations++)\{\
+            cookies *= 2;\
+        \}\
+       //cookies = 8\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 O(n!) Factorial Time - Sounds tough, yeah? Dont\'92 sweat, factorials are easy to comprehend. Multiply every integer from 1 to n together. For example, if n = 5, n! = 1*2*3*4*5 = 120. See, that wasn't so hard. Conceptualizing O(n!) so we can recognize it in the world world can be tricky.  Hold on, don't close the book just yet. We\'92re almost done. Factorial timing has to do with 
+\f3\i permutations
+\f0\i0 . 
+\f3\i Permutations 
+\f0\i0 just means
+\f3\i  how many ways we can arrange things
+\f0\i0 . The difference between 
+\f3\i permutations
+\f0\i0  and 
+\f3\i combinations
+\f0\i0  (see Exponential Time) is that the order DOES matter and we have to use every element. To simplify this, we\'92ll go back to our cookie example but now we have purchased all 3 cookies and have to figure out the order of how we\'92re going to eat them. What different \cf13 combinations crossed out\cf0  permutations can we eat them in? We could do a bunch of arithmetic to figure this out, sure, but I promised not to do that to you again and a promise is a promise. So, let us use a little deduction to figure out our options.\
+\
+1:chocolate chip 	2:snickerdoodle 	3:oatmeal\
+1:chocolate chip 	2:oatmeal 		3:snickerdoodle\
+1: snickerdoodle	2:chocolate chip	3:oatmeal\
+1: snickerdoodle	2:oatmeal		3:chocolate chip\
+1:oatmeal		2:chocolate chip	3:snickerdoodle\
+1:oatmeal		2: snickerdoodle	3:chocolate chip\
+\
+This gives us 6 possibilities of our cookie eating order. That wasn\'92t too hard to figure out. \cf3 To get the combination of 3 different types of cookies, we simply need to calculate 3!, or 1*2*3 = 6. \cf0 But what if we had, say, 7 types of cookies \cf2 drool emoji \cf3 To get the combination of 7 different types of cookies, we simply need to calculate 7!, or 1*2*3*4*5*6*7 = 540. So much easier than our deduction method.\cf0 \
+programming example:\
+        int cookieCombinations = 1;\
+        int typesOfCookie = 7;\
+        for(int i = 1; i <= typesOfCookie; i++)\{\
+            cookieCombinations *= i;\
+        \}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0         // cookieCombinations = 540\
+\
+-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-\
+\
+\
+The order of time complexities from fastest to slowest:\
+O(1) Constant Time\
+O(log(n)) Logarithmic Time\
+O(n)  Linear Time \
+O(nlog(n)) Logarithmic Time\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx17631\pardirnatural\partightenfactor0
+\cf0 O(n^2) Quadratic Time\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf12 O(2^n) Exponential Time \cf0 \
+O(n!) Factorial Time - 
+\f4\fs30 \cf14 \expnd0\expndtw0\kerning0
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\sl504\partightenfactor0
+
+\f2\fs33\fsmilli16800 \cf3 \expnd0\expndtw0\kerning0
+\shad\shadx0\shady-20\shadr0\shado255 \shadc0 -	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 Algorithms:\
+beginner \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 -mergesort (sorting)\
+1.cuts in half until single elements\
+2.compares each child node (element if leaf, array if not) and oragnizes into array (now the parent)\
+3.do this until back at root (log(n) times).\
+Sometimes the constant can make a difference. Quicksort versus merge sort is one example. \
+Quicksort has a smaller constant than merge sort. So if they\'92re both O(n log n) time, quicksort is faster. \
+And quicksort is faster in practice because it hits the average case way more often than the worst case.\
+\
+-Quicksort (sorting)\
+pick an element in the array to be the pivot\
+partitioning - move the numbers smaller than the pivot to the left, larger to the right \
+now we have 2 sub-arrays and the pivot \
+{\listtext	1.	}Pick a pivot. \
+{\listtext	2.	}Partition the array into two sub-arrays: elements less than the pivot and elements greater than the pivot. \
+{\listtext	3.	}Call quicksort recursively on the two sub-arrays. \
+can take worst case O(n^2) but average case is O(nlog(n)) \
+\
+-bubble sort\
+\
+-Selection Sort\
+log(n^2) (even though it\'92s \{n+n-1+n-2\'85\} which averages out to be 1/2\{n+n+n\'85\} but constants don\'92t matter).\
+iteratres through each element to find an element n times\
+\
+-Inserted Sort\
+\
+-breadth first search\
+\
+-depth first search\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+intermediate \
+-Topological Sort\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 \
+\
+-timsort\
+\
+-djikstra\'92s\
+shortest path of weighted graphs\
+only works on positively weighted graphs\
+\
+-Bellman-Ford\
+works on negatively weighted graphs\
+\
+greedy \
+\pard\pardeftab720\partightenfactor0
+\ls2\ilvl0\cf0 NP (nondeterministic polynomial time\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 \
+advanced\
+\pard\pardeftab720\sa293\partightenfactor0
+
+\f2\fs33\fsmilli16800 \cf3 \expnd0\expndtw0\kerning0
+\shad\shadx0\shady-20\shadr0\shado255 \shadc0 -	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-\
+\pard\pardeftab720\sl504\partightenfactor0
+\cf3 \shad\shadx0\shady-20\shadr0\shado255 \shadc0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 \
+\
+Data Structures:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb15 -Arrays\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 most used data structure. \
+simplest data structures\
+Lookup by index: o(1)\
+Lookup by value: o(n)\
+Insert: o(n)\
+Delete: o(n)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb15 -Linked Lists\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 2nd most commoly used data structure. \
+auto grow/shrink but take more memory\
+lookup = o(n) because involves traversing the list\
+-	-	-	-	-	-\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -Singly Linked List\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 Lookup by index: o(n) \
+Lookup by value: o(n)\
+Insert Beg: o(1)\
+Insert Middle: o(n)\
+Insert End: o(1)\
+Delete Beg: o(1)\
+Delete Middle: o(n)\
+Delete End: o(n)\
+-	-	-	-	-	-\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -Doubly Linked List\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 Lookup by index: o(n) \
+Lookup by value: o(n)\
+Insert Beg: o(1)\
+Insert Middle: o(n)\
+Insert End: o(1)\
+Delete Beg: o(1)\
+Delete Middle: o(n)\
+Delete End: o(1)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb15 -Sets\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb15 -Stacks\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 all operations run in o(1)\
+LIFO behavior\
+can be implemented with arrays or linked lists\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb15 -Queues\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 used by printers (prints jobs in order they\'92re submitted), operating systems (used to manage processes),  web servers (requests processed or orders they are received), anywhere you want to process jobs based on the order received\
+enqueue: add to back of queue\
+dequeue: remove from front of queue\
+peek: see item at front of queue\
+isEmpty: check if empty\
+isFull: check if full (optional)\
+all operations run in o(1)\
+FIFO behavior\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -Priority Queues\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 process based on priority, not order joined\
+enqueue: o(n) if using array due to shifting\
+dequeue: o(1)\
+peek:  o(1)\
+isEmpty:  o(1)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb15 -Hashtables (dictionaries)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 used to optimize many algorithms\
+come up a lot in interviews\
+give us super fast lookups\
+spellcheckers, dictionaries, compilers, code editors\
+Java=Hashmap Javascript=Object C#/Python=Dictionary\
+key/value pairs\
+Deterministic -> every time we give it the same input, it\'92ll give us the same value\
+internally, uses an array to store objects\
+insert: o(1)\
+delete: o(1)\
+lookup: o(1)\
+because the hash functions tells us where in memory we should store an object\
+can run in o(n) but rarely happens so concensus is o(1)\
+Colisions <\'97 2 keys pointing to the same index in an array\
+	have key point to a link list (chaining)\
+	or find a different slot to store 2nd value (open addressing)\
+probing algorithms for open addressing: linear, quadratic, double hashing\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf3 \cb15 TREES\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 stores elements in a heirarchy\
+elemnts = nodes \
+line that connect them = edges\
+top element = root\
+bottom elements = leafs\
+shows numbers but could store objects in the nodes\
+stores elements in a heirarchy\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl704\sa220\partightenfactor0
+\ls3\ilvl0
+\fs44 \cf5 \cb4 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Each tree has a root node (at the top).\cb1 \
+\ls3\ilvl0\cb4 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+The root node has zero or more child nodes.\cb1 \
+\ls3\ilvl0\cb4 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+Each child node has zero or more child nodes, and so on.\cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -Binary Tree\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -Binary Search Tree\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 all child nodes on left are smaller, node < right child\
+log time (if proplerly structured, linear if not)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl704\sa220\partightenfactor0
+\ls4\ilvl0
+\fs44 \cf5 \cb4 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Each node has up to two children.
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 insert: o(log(n))\
+delete: o(log(n))\
+lookup: o(log(n))\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -avl tree\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 self balancing binary search tree\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -Trie\
+\pard\pardeftab720\partightenfactor0
+
+\fs44 \cf5 \cb4 \expnd0\expndtw0\kerning0
+The trie (pronounced \'91try\'92), or prefix tree, is a kind of search tree. A trie stores data in steps where each step is a node in the trie. Tries are often used to store words for quick lookup, such as a word auto-complete feature.
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf3 \cb15 HEAPS\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb16 -Binary Heap\
+\pard\pardeftab720\partightenfactor0
+
+\fs44 \cf5 \cb4 \expnd0\expndtw0\kerning0
+A binary heap is another type of tree data structure. Every node has at most two children. Also, it is a complete tree. This means that all levels are completely filled until the last level and the last level is filled from left to right.
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+
+\fs44 \cf5 \cb4 \expnd0\expndtw0\kerning0
+A binary heap can be either a min heap or a max heap. In a max heap, the keys of parent nodes are always greater than or equal to those of the children. In a min heap, the keys of parent nodes are less than or equal to those of the children.
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1010\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx2880
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1137\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx5760
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1137\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4\fs32 \cf5 \cb4 \expnd0\expndtw0\kerning0
+Search\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 0(1)\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 0(log n)\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1010\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx2880
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1137\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx5760
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1137\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 Insert\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 0(log n)\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 0(log n)\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1010\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx2880
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1137\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx5760
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1137\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 Delete\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 0(1)\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 0(1)\cb1 \cell \lastrow\row
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb15 GRAPHS\
+\pard\pardeftab720\sa660\partightenfactor0
+
+\fs44 \cf5 \cb4 \expnd0\expndtw0\kerning0
+Graphs are collections of nodes (also called vertices) and the connections (called edges) between them. Graphs are also known as networks.\
+One example of graphs is a social network. The nodes are people and the edges are friendship.\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb1 \
+\pard\pardeftab720\sa660\partightenfactor0
+\cf5 \cb4 There are two major types of graphs: directed and undirected. Undirected graphs are graphs without any direction on the edges between nodes. Directed graphs, in contrast, are graphs with a direction in its edges.\
+Two common ways to represent a graph are an adjacency list and an adjacency matrix.\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb1 \
+\pard\pardeftab720\sl528\qc\partightenfactor0
+
+\fs35\fsmilli17600 \cf5 \cb4 Adjacency matrix graph\cb1 \
+\pard\pardeftab720\sa660\partightenfactor0
+
+\fs44 \cf5 \cb4 An adjacency list can be represented as a list where the left side is the node and the right side lists all the other nodes it\'92s connected to.\
+An adjacency matrix is a grid of numbers, where each row or column represents a different node in the graph. At the intersection of a row and a column is a number that indicates the relationship. Zeros mean there is no edge or relationship. Ones mean there is a relationship. Numbers higher than one can be used to show different weights.\
+Traversal algorithms are algorithms to traverse or visit nodes in a graph. The main types of traversal algorithms are breadth-first search and depth-first search. One of the uses is to determine how close nodes are to a root node. See how to implement breadth-first search in JavaScript in the video below.\
+\pard\pardeftab720\sa660\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://codepen.io/beaucarnes/pen/XgrXvw?editors=0011"}}{\fldrslt \cf5 \ul \ulc5 See the code for breadth-first search on an adjacency matrix graph in JavaScript.}}\
+\pard\pardeftab720\sl760\sa134\partightenfactor0
+
+\f1\b\fs67\fsmilli33600 \cf3 Binary search time complexity\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth2179\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1367\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\fs28\fsmilli14400 \cf5 ALGORITHM\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 TIME\cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth2179\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1367\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4\b0\fs32 \cf5 \cb4 Storage\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 O(|V|+|E|)\cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth2179\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1367\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 Add Vertex\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 O(1)\cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth2179\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1367\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 Add Edge\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 O(1)\cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth2179\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1367\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 Remove Vertex\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 O(|V|+|E|)\cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth2179\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1367\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 Remove Edge\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 O(|E|)\cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth2179\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth1367\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl240 \clpadb120 \clpadr240 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 Query\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf5 \cb4 O(|V|)\cb1 \cell \lastrow\row
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+-DAG\
+\
+\
+\pard\pardeftab720\sl504\partightenfactor0
+
+\f2\fs33\fsmilli16800 \cf3 \expnd0\expndtw0\kerning0
+\shad\shadx0\shady-20\shadr0\shado255 \shadc0 -	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 \
+tricks: \
+Divide and Conquer:\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f5\fs29\fsmilli14667 \cf3 \expnd0\expndtw0\kerning0
+D&C isn\'92t a simple algorithm that you can apply to a problem. Instead, it\'92s a way to think about a problem. 
+\fs24 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl520\partightenfactor0
+\ls5\ilvl0
+\f6\b\fs34 \cf17 \cb4 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Divide:\'a0
+\f0\b0 This involves dividing the problem into some sub problem.\cb1 \
+\ls5\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+Conquer:\'a0
+\f0\b0 Sub problem by calling recursively until sub problem solved.\cb1 \
+\ls5\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+Combine:\'a0
+\f0\b0 The Sub problem Solved so that we will get find problem solution.\'a0\cb1 \uc0\u8232 \cb4 \'a0\cb1 \
+\pard\pardeftab720\sa200\partightenfactor0
+\cf17 \cb4 The following are some standard algorithms that follows Divide and Conquer algorithm.\'a0\'a0\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl520\partightenfactor0
+\ls6\ilvl0
+\f6\b \cf17 \kerning1\expnd0\expndtw0 {\listtext	1.	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Binary_search_algorithm"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Binary Search}}
+\f0\b0 \expnd0\expndtw0\kerning0
+\'a0is a searching algorithm. In each step, the algorithm compares the input element x with the value of the middle element in array. If the values match, return the index of the middle. Otherwise, if x is less than the middle element, then the algorithm recurs for left side of the middle element, else recurs for the right side of the middle element.\cb1 \
+\ls6\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	2.	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Quick_Sort"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Quicksort}}
+\f0\b0 \expnd0\expndtw0\kerning0
+\'a0is a sorting algorithm. The algorithm picks a pivot element, rearranges the array elements in such a way that all elements smaller than the picked pivot element move to left side of pivot, and all greater elements move to right side. Finally, the algorithm recursively sorts the subarrays on left and right of pivot element.\cb1 \
+\ls6\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	3.	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Merge_Sort"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Merge Sort}}
+\f0\b0 \expnd0\expndtw0\kerning0
+\'a0is also a sorting algorithm. The algorithm divides the array in two halves, recursively sorts them and finally merges the two sorted halves.\cb1 \
+\ls6\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	4.	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Closest_pair_of_points_problem"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Closest Pair of Points}}
+\f0\b0 \expnd0\expndtw0\kerning0
+\'a0The problem is to find the closest pair of points in a set of points in x-y plane. The problem can be solved in O(n^2) time by calculating distances of every pair of points and comparing the distances to find the minimum. The Divide and Conquer algorithm solves the problem in O(nLogn) time.\cb1 \
+\ls6\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	5.	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Strassen_algorithm"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Strassen\'92s Algorithm}}
+\f0\b0 \expnd0\expndtw0\kerning0
+\'a0is an efficient algorithm to multiply two matrices. A simple method to multiply two matrices need 3 nested loops and is O(n^3). Strassen\'92s algorithm multiplies two matrices in O(n^2.8974) time.\cb1 \
+\ls6\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	6.	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Cooley\'96Tukey Fast Fourier Transform (FFT) algorithm}}
+\f0\b0 \expnd0\expndtw0\kerning0
+\'a0is the most common algorithm for FFT. It is a divide and conquer algorithm which works in O(nlogn) time.\cb1 \
+\ls6\ilvl0
+\f6\b \cb4 \kerning1\expnd0\expndtw0 {\listtext	7.	}{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Karatsuba_algorithm"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Karatsuba algorithm for fast multiplication}}
+\f0\b0 \expnd0\expndtw0\kerning0
+\'a0it does multiplication of two\'a0
+\f3\i n
+\f0\i0 -digit numbers in at most\cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+-algorithm for combination lock scenario\
+base^n where base = number of possible elements, n = number of iterations\
+exp. a bike lock with a dial of 10 possibilities (array 0-9) on a link of 5 sets (iterations) has 10^5 (100,000) possibilities\
+\pard\pardeftab720\sl504\partightenfactor0
+
+\f2\fs33\fsmilli16800 \cf3 \expnd0\expndtw0\kerning0
+\shad\shadx0\shady-20\shadr0\shado255 \shadc0 -	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \shad0 \
+\
+Lookup by index: \
+Lookup by value: \
+Insert Beg: \
+Insert Middle: \
+Insert End: \
+Delete Beg:\
+Delete Middle: \
+Delete End: }

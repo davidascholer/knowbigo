@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./styles/main.css' rel='stylesheet' />
+    <title>Know Big O</title>
+</head>
+
+<body>
+    <div class='quicksort-container'>
+        <button onclick="handleClick()">step</button>
+        <button onclick="animateQuicksort()">animate</button>
+        <div class='quicksort-child-container'>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+            <span class='quicksort-child circle active'>x</span>
+        </div>
+
+        <div>
+            <h3>Step One</h3>
+            <p>Generate a random pivot.</p>
+        </div>
+        <div>
+            <h3>Step Two</h3>
+            <p>Move the pivot out of the way. Here, we'll move it to the beginning of the array.</p>
+        </div>
+        <div>
+            <h3>Step Three</h3>
+            <p>Create pointers to the high and low values.</p>
+        </div>
+        <div>
+            <h3>Step Four</h3>
+            <p>Iterate the right pointer until the value is less than the pointer value.</p>
+        </div>
+        <div>
+            <h3>Step Five</h3>
+            <p>Iterate the left pointer until the value is greater than the pointer value.</p>
+        </div>
+        </div>
+        <div>
+            <h3>Step Six</h3>
+            <p>Switch the low value with the high value.</p>
+        </div>
+        <div>
+            <h3>Step Seven</h3>
+            <p>Move the pivot back to the now sorted list.</p>
+            <p>Hint: Since the right side gets implemented first, the common index where the leftPointer equals the rightPointer will always be smaller than the pivot.</p>
+        </div>
+        <div>
+            <h3>Step Seven</h3>
+            <p>Recursively call quick sort with the sub arrays.</p>
+        </div>
+        <code>
+            const generateRandomArray = (length, maxLength) => {
+                const generatedArray = [];
+                for (let i = 0; i < length; i++) {
+                    const randomNum = Math.random() * maxLength;
+                    generatedArray.push(Math.floor(randomNum));
+                }
+                return generatedArray;
+            }
+            
+            const theArray = generateRandomArray(20, 100);
+            
+            const quickSort = (leftIndex, rightIndex) => {
+            
+                let rightPointer;
+                let leftPointer;
+                let pivotIndex;
+                let pivot;
+            
+                if (leftIndex >= rightIndex)
+                    return;
+            
+                rightPointer = rightIndex;
+                leftPointer = leftIndex; 
+            
+                //Create pivot
+                pivotIndex = generateRandomPivot(leftPointer, rightPointer);
+                pivot = theArray[pivotIndex];
+            
+                //Move the pivot out of the way, to either the right or left index. We'll switch it with the left index.
+                switchIndices(leftIndex, pivotIndex);
+            
+                //Move pointers and sort.
+                while (leftPointer !== rightPointer) {
+            
+                    //Pointer opposite of the index must go first.
+            
+                    //Move the right pointer to where the value is less than the pivot.
+                    while (theArray[rightPointer] >= pivot && rightPointer > leftPointer)
+                        rightPointer--;
+            
+                    //Move the left pointer to where the value is more than the pivot.
+                    while (theArray[leftPointer] <= pivot && leftPointer < rightPointer)
+                        leftPointer++;
+            
+                    switchIndices(leftPointer, rightPointer);
+                }
+            
+                //Move the pivot back to it's place in the array
+                pivotIndex = rightPointer;
+                switchIndices(leftIndex, pivotIndex);
+            
+                quickSort(leftIndex, pivotIndex - 1);
+                quickSort(pivotIndex + 1, rightIndex);
+            }
+            
+            const generateRandomPivot = (leftBoundary, rightBoundary) => {
+                const range = rightBoundary - leftBoundary;
+                const randomNum = range * Math.random();
+                return Math.floor(randomNum + leftBoundary);
+            }
+            
+            const switchIndices = (indexOne, indexTwo) => {
+                //Change the inner html and styles
+                const temp = theArray[indexOne];
+                theArray[indexOne] = theArray[indexTwo];
+                theArray[indexTwo] = temp;
+            }
+            
+        </code>
+    </div>
+
+    <script src='./js/quicksort_js.js'></script>
+</body>
+
+</html>
