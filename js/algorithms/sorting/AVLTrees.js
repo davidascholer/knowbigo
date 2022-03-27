@@ -12,7 +12,7 @@ class Node {
 const insert = (root, value) => {
     if (!root)
         return new Node(value);
-
+ 
     if (value < root.value)
         insert(root.leftChild, value)
     else
