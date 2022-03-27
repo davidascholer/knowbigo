@@ -76,7 +76,7 @@ module.exports = dijkstra = () => {
     while (node !== null) {
         // get the neighbors and cost of the vertex
         const neighbors = Object.keys(edges[node]);
-        // update the parent and cost if less than current cost
+        // update the parent and cost if < than current cost
         for (let n of neighbors) {
             const currentCost = vertices[node]['cost'] + edges[node][n];
             const prevCost = vertices[n]['cost'];
